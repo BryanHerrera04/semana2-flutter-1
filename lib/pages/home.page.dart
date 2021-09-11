@@ -77,79 +77,37 @@ _listaBotonFila1() {
     pintarBoton(componente: Text('÷'), metodo: () {}),
     pintarBoton(componente: Icon(Icons.arrow_back), metodo: () {}),
     pintarBoton(componente: Text('C'), metodo: () {}),
-    ElevatedButton(onPressed: () {}, child: Text('7')),
-    ElevatedButton(onPressed: () {}, child: Text('8')),
-    ElevatedButton(onPressed: () {}, child: Text('9')),
-    ElevatedButton(onPressed: () {}, child: Text('÷')),
-    ElevatedButton(onPressed: () {}, child: Icon(Icons.arrow_back)),
-    ElevatedButton(onPressed: () {}, child: Text('C')),
   ];
 }
 
 _listaBotonFila2() {
   return [
-    ElevatedButton(onPressed: () {}, child: Text('4')),
-    ElevatedButton(onPressed: () {}, child: Text('5')),
-    ElevatedButton(onPressed: () {}, child: Text('6')),
-    ElevatedButton(onPressed: () {}, child: Text('x')),
-    ElevatedButton(onPressed: () {}, child: Text('(')),
-    ElevatedButton(onPressed: () {}, child: Text(')')),
+    pintarBoton(componente: Text('4'), metodo: () {}),
+    pintarBoton(componente: Text('5'), metodo: () {}),
+    pintarBoton(componente: Text('6'), metodo: () {}),
+    pintarBoton(componente: Text('x'), metodo: () {}),
+    pintarBoton(componente: Text('('), metodo: () {}),
+    pintarBoton(componente: Text(')'), metodo: () {}),
   ];
 }
 
 _listaBotonFila3() {
   return [
-    ElevatedButton(onPressed: () {}, child: Text('1')),
-    ElevatedButton(onPressed: () {}, child: Text('2')),
-    ElevatedButton(onPressed: () {}, child: Text('3')),
-    ElevatedButton(onPressed: () {}, child: Text('-')),
-    ElevatedButton(onPressed: () {}, child: Text('x2')),
-    ElevatedButton(onPressed: () {}, child: Text('√')),
+    pintarBoton(componente: Text('1'), metodo: () {}),
+    pintarBoton(componente: Text('2'), metodo: () {}),
+    pintarBoton(componente: Text('3'), metodo: () {}),
+    pintarBoton(componente: Text('-'), metodo: () {}),
+    pintarBoton(componente: Text('x2'), metodo: () {}),
+    pintarBoton(componente: Text('√'), metodo: () {}),
   ];
 }
 
 _listaBotonFila4() {
   return [
-    Expanded(
-        child: Container(
-            child: Padding(
-      padding: const EdgeInsets.all(2.0),
-      child: ElevatedButton(onPressed: () {}, child: Text('0')),
-    ))),
-    Expanded(
-        child: Container(
-            child: Padding(
-      padding: const EdgeInsets.all(2.0),
-      child: ElevatedButton(onPressed: () {}, child: Text(',')),
-    ))),
-    Expanded(
-        child: Container(
-            child: Padding(
-      padding: const EdgeInsets.all(2.0),
-      child: ElevatedButton(onPressed: () {}, child: Text('%')),
-    ))),
-    Expanded(
-        child: Container(
-            child: Padding(
-      padding: const EdgeInsets.all(2.0),
-      child: ElevatedButton(onPressed: () {}, child: Text('+')),
-    ))),
-    Expanded(
-        flex: 2,
-        child: Container(
-            child: Padding(
-          padding: const EdgeInsets.all(2.0),
-          child: ElevatedButton(onPressed: () {}, child: Text('=')),
-        ))),
-
-    //ElevatedButton(onPressed: () {}, child: Text('0')),
-    //ElevatedButton(onPressed: () {}, child: Text(',')),
-    //ElevatedButton(onPressed: () {}, child: Text('%')),
-    //ElevatedButton(onPressed: () {}, child: Text('+')),
-    //ElevatedButton(
-    //    onPressed: () {},
-    //    style: ElevatedButton
-    //    child: Text('=')),
-    //ElevatedButton(style: , onPressed: () {}, child: Text('=')),
+    pintarBoton(componente: Text('0'), metodo: () {}),
+    pintarBoton(componente: Text(','), metodo: () {}),
+    pintarBoton(componente: Text('%'), metodo: () {}),
+    pintarBoton(componente: Text('+'), metodo: () {}),
+    pintarBoton(componente: Text('x='), metodo: () {}, valorFlex: 2),
   ];
 }

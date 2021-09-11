@@ -7,6 +7,6 @@ Widget pintarBoton(
       child: Container(
           child: Padding(
         padding: const EdgeInsets.all(2.0),
-        child: ElevatedButton(onPressed: metodo, child: Text(componente)),
+        child: ElevatedButton(onPressed: metodo, child: componente),
       )));
 }
