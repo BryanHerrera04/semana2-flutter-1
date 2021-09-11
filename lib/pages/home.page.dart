@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home'),
+        title: Text('Calculadora'),
       ),
       body: Column(
         children: [
@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
               child: Row(
                 children: [Text('Zona Ingreso')],
               ),
-              color: Colors.blue,
+              color: Colors.grey[500],
             ),
           ),
           Expanded(
@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
               child: Row(
                 children: [Text('Zona Ingreso')],
               ),
-              color: Colors.red,
+              color: Colors.grey[700],
             ),
           ),
           Expanded(
@@ -60,7 +60,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ],
               ),
-              color: Colors.green,
+              color: Colors.grey,
             ),
           )
         ],
@@ -97,7 +97,7 @@ _listaBotonFila3() {
     pintarBoton(componente: Text('2'), metodo: () {}),
     pintarBoton(componente: Text('3'), metodo: () {}),
     pintarBoton(componente: Text('-'), metodo: () {}),
-    pintarBoton(componente: Text('x2'), metodo: () {}),
+    pintarBoton(componente: Text('x²'), metodo: () {}),
     pintarBoton(componente: Text('√'), metodo: () {}),
   ];
 }
@@ -108,6 +108,10 @@ _listaBotonFila4() {
     pintarBoton(componente: Text(','), metodo: () {}),
     pintarBoton(componente: Text('%'), metodo: () {}),
     pintarBoton(componente: Text('+'), metodo: () {}),
-    pintarBoton(componente: Text('x='), metodo: () {}, valorFlex: 2),
+    pintarBoton(
+        componente: Text('='),
+        metodo: () {},
+        valorFlex: 2,
+        colorBoton: Colors.green[600]),
   ];
 }
