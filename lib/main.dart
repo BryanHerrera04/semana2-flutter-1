@@ -11,6 +11,7 @@ class MiAplicacion extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Calculadora Semana 2',
       theme: ThemeData.dark(),
       home: HomePage(),

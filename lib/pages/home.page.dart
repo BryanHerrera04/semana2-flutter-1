@@ -1,6 +1,5 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
+import 'package:semanda2flutter1/widgets/botonPresionado.dart';
 import 'package:semanda2flutter1/widgets/botones.widgets.dart';
 
 class HomePage extends StatefulWidget {
@@ -20,10 +19,16 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         children: [
           Expanded(
-            flex: 5,
+            flex: 3,
             child: Container(
+              alignment: Alignment.centerRight,
               child: Row(
-                children: [Text('Zona Ingreso')],
+                children: [
+                  Text(
+                    resultado,
+                    style: TextStyle(fontSize: resultadoTamano),
+                  )
+                ],
               ),
               color: Colors.grey[500],
             ),
@@ -32,7 +37,12 @@ class _HomePageState extends State<HomePage> {
             flex: 1,
             child: Container(
               child: Row(
-                children: [Text('Zona Ingreso')],
+                children: [
+                  Text(
+                    ecuacion,
+                    style: TextStyle(fontSize: ecuacionTamano),
+                  )
+                ],
               ),
               color: Colors.grey[700],
             ),
@@ -56,7 +66,17 @@ class _HomePageState extends State<HomePage> {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: _listaBotonFila4(),
+                    children: [
+                      pintarBoton(componente: Text('0'), metodo: () {}),
+                      pintarBoton(componente: Text(','), metodo: () {}),
+                      pintarBoton(componente: Text('%'), metodo: () {}),
+                      pintarBoton(componente: Text('+'), metodo: () {}),
+                      pintarBoton(
+                          componente: Text('='),
+                          metodo: () {},
+                          valorFlex: 2,
+                          colorBoton: Colors.green[600]),
+                    ],
                   ),
                 ],
               ),
@@ -99,19 +119,5 @@ _listaBotonFila3() {
     pintarBoton(componente: Text('-'), metodo: () {}),
     pintarBoton(componente: Text('x²'), metodo: () {}),
     pintarBoton(componente: Text('√'), metodo: () {}),
-  ];
-}
-
-_listaBotonFila4() {
-  return [
-    pintarBoton(componente: Text('0'), metodo: () {}),
-    pintarBoton(componente: Text(','), metodo: () {}),
-    pintarBoton(componente: Text('%'), metodo: () {}),
-    pintarBoton(componente: Text('+'), metodo: () {}),
-    pintarBoton(
-        componente: Text('='),
-        metodo: () {},
-        valorFlex: 2,
-        colorBoton: Colors.green[600]),
   ];
 }
